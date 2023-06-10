@@ -1,0 +1,29 @@
+= Using TED RDF data
+:description: The sample application for the TED-SWS project.
+:sectanchors:
+:license-url: https://creativecommons.org/licenses/by/4.0/deed.en
+:license-title: CC BY 4.0
+:docinfo: shared
+
+This documentation covers the essential aspects of how to use TED procurement data (in RDF format) accessed from *Cellar* including:
+
+* xref::use-in-excel.adoc[Using TED data in Microsoft Excel (and Power BI)]
+* xref::use-in-notebook-python.adoc[Using TED data in a Python Jupyter Notebook]
+* xref::use-in-notebook-r.adoc[Using TED data in an R Jupyter Notebook]
+
+The TED data can be accessed via the Cellar SPARQL endpoint and used in different ways. The methods described below work with TED notice and other types of semantic assets. The users shall adapt the SPARQL queries according to its needs in order to fetch the desired data.
+
+== Context of work
+
+This work is developed in the context of TED Semantic Web Services (TED-SWS system), and highlights the value of transforming the TED data from XML into RDF format. The TED-RDF Conversion Pipeline provides tools an infrastructure to convert TED notices available in XML format into RDF. This conversion pipeline is designed to work with the https://docs.ted.europa.eu/rdf-mapping/index.html[TED-SWS Mapping Suites] – self-containing packages with transformation rules and resources.
+
+The TED data in RDF format is conformant to the eProcurement Ontology, a project financed by the Digital Europe Programme and led by the https://op.europa.eu/en/[Publications Office of the European Union]. The ontology can be accessed on https://github.com/OP-TED/ePO[GitHub] and the documentation is available on https://github.com/eprocurementontology/eprocurementontology[TED Developer Documentation page].
+
+[NOTE]
+Jupyter Notebook samples are explained under the assumption that the reader is familiar with the concept of "Jupyter notebook", and a code editor is already prepared. For example VS Code or Pycharm, or Jupyter server. Examples are explained using https://code.visualstudio.com/docs[[.underline]#Visual Studio Code#].
+
+[WARNING]
+When this documentation was written, no TED notices in RDF format were yet available in Cellar. This document will be updated removing this warning when data is publicly available. For now, we use a sample SPARQL, which returns a list of countries instead of TED specific data.
+
+
+

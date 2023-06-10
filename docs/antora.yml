@@ -1,0 +1,9 @@
+name: ted-data-exploring
+version: 0.0.1
+title: TED data exploring
+start_page: ROOT:index.adoc
+nav:
+  - modules/ROOT/nav.adoc
+asciidoc:
+  attributes:
+    page-toclevels: 6@

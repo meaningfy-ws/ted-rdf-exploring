@@ -1,0 +1,50 @@
+== Microsoft Excel
+
+
+This section shows an example of getting data from Cellar using Microsoft Excel. The same method can be used in Power BI via Power Query, a mechanism to connect to many different data sources (including SPARQL endpoints) and transform the data into the shape you want.
+
+To fetch data from *Cellar* follow the next steps:
+
+[arabic]
+. Use Cellar SPARQL endpoint interface to prepare an URL with an embedded SPARQL query:
+
+* Access:
+https://publications.europa.eu/webapi/rdf/sparql[[.underline]#https://publications.europa.eu/webapi/rdf/sparql#]
+
+* Insert query
+
+Example query:
+[source, sparql]
+prefix cdm: <http://publications.europa.eu/ontology/cdm#>
+select distinct ?Countries
+where {
+?Countries a cdm:country .
+}
+
+
+[WARNING]
+When this documentation was written, no TED notices in RDF format were yet available in Cellar. This document will be updated removing this warning when data is publicly available. For now, we use a sample SPARQL, which returns a list of countries instead of TED specific data.
+
+* Push the "Run Query" button
+
+image:excel/image6.png[image,width=407,height=466]
+
+* Copy the URL with the embedded SPARQL query
+
+image:excel/image47.png[image,width=601,height=281]
+
+[arabic, start=2]
+. Access result table via Excel:
+
+* Click on Data -> From Web button
+
+
+image:excel/image58.png[image,width=601,height=264]
+
+* In appeared window insert result link then press OK:
+
+image:excel/image88.png[image,width=601,height=320]
+
+* In result window select necessary table, press load:
+
+image:excel/image41.png[image,width=601,height=464]
