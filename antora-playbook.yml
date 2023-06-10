@@ -11,7 +11,7 @@ antora:
 content:
   sources:
 #    - url: .
-    - url: https://github.com/meaningfy-ws/model2owl-docs
+    - url: https://github.com/meaningfy-ws/ted-rdf-exploring
       branches: [ main ]
       start_path: docs
 ui:
