@@ -1,5 +1,5 @@
 site:
-  title: model2owl documentation
+  title: Using TED RDF data
   start_page: ROOT::index.adoc
 
 antora:
