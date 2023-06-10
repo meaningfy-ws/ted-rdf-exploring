@@ -1,0 +1,57 @@
+== Jupyter Notebook - Python
+
+This section shows an example of using TED data in a Python Jupyter Notebook. The
+Jupyter Notebook is an application for creating and sharing
+computational documents. Python represents a programming language for
+writing computational documents. To realize the proposed scenario, it is
+necessary to install the special tools and use the Python code that will
+perform a query to the Cellar endpoint and display the results in tabular
+form (xref:references-python[Working with Jupyter Notebook]).
+
+To run Python sample:
+
+[arabic]
+. Download Jupyter Notebook file:
+
+https://github.com/OP-TED/ted-rdf-conversion-pipeline/blob/main/notebooks/query_cellar_python.ipynb[[.underline]#https://github.com/OP-TED/ted-rdf-conversion-pipeline/blob/main/notebooks/query_cellar_python.ipynb#]
+
+[arabic, start=2]
+. Download & Install Python 3.8:
+[loweralpha]
+.. Windows 64bit:
+https://www.python.org/ftp/python/3.8.10/python-3.8.10-amd64.exe[[.underline]#download#]
+
+.. Windows 86bit:
+https://www.python.org/ftp/python/3.8.10/python-3.8.10.exe[[.underline]#download#]
+
+. Open Jupyter Notebook file with code editor (VS Code):
+
+. In code editor, select interpreter for Python that was installed
+
+Example in VS Code:
+
+image:python/image8.png[image,width=617,height=204]
+
+[arabic, start=5]
+. Install dependencies:
+
+* Use OS command line and type:
+[source,python]
+pip install ipykernel sparqlwrapper pandas
+
+[arabic, start=6]
+. Run Cells (example in VS Code):
+
+image:python/image62.png[image,width=601,height=84]
+
+If all works good, on last output cell we can see results:
+
+image:python/image2.png[image,width=387,height=420]
+
+== References
+[[references-python]]
+
+[arabic]
+. “Working with Jupyter Notebooks in Visual Studio Code.” n.d. Visual
+Studio Code.
+https://code.visualstudio.com/docs/datascience/jupyter-notebooks[[.underline]#https://code.visualstudio.com/docs/datascience/jupyter-notebooks#]
