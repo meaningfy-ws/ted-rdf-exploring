@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Untitled :: Using TED RDF data</title>
+    <meta name="generator" content="Antora 3.1.3">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <script>var uiRootPath = '../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+    <nav class="navbar">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="../..">
+            </a>
+        </div>
+    </nav>
+<nav class="navbar">
+    <div class="navbar-brand">
+      <div class="navbar-item search hide-for-print">
+        <div id="search-field" class="field">
+          <input id="search-input" type="text" placeholder="Search the docs" >
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="ted-data-exploring" data-version="0.0.1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="index.html">TED data exploring</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="index.html">Using TED RDF data</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="use-in-excel.html">Using TED data in Microsoft Excel (and Power BI)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="use-in-notebook-python.html">Using TED data in a Python Jupyter Notebook</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="use-in-notebook-r.html">Using TED data in an R Jupyter Notebook</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">TED data exploring</span>
+    <span class="version">0.0.1</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="index.html">TED data exploring</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">TED data exploring</a></li>
+    <li><a href="index.html">Using TED RDF data</a></li>
+    <li><a href="use-in-notebook-r.html">Using TED data in an R Jupyter Notebook</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/meaningfy-ws/ted-rdf-exploring/edit/main/docs/modules/ROOT/pages/use-in-notebook-r.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="6">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<div class="sect1">
+<h2 id="_jupyter_notebook_r"><a class="anchor" href="#_jupyter_notebook_r"></a>Jupyter Notebook - R</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This section shows an example using Jupyter Notebook in R language. R is
+software environment for statistical computing and graphic
+representation. In this case, R represents the programming language for
+writing notebook documents. To realize the proposed scenario, it is
+necessary to install the special tools (<a href="#references-r">Running R Jupyter Notebooks</a>) and
+use the R code that will perform a query (<a href="#references-r">SPARQL with R</a>) to
+the cellar and display the results in tabular form.</p>
+</div>
+<div class="paragraph">
+<p>To run R sample:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Install &amp; install R language:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Windows 64bit:
+<a href="https://cran.r-project.org/bin/windows/base/R-4.2.2-win.exe"><span class="underline">download</span></a></p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="2">
+<li>
+<p>Download Jupyter Notebook file:
+<a href="https://github.com/OP-TED/ted-rdf-conversion-pipeline/blob/main/notebooks/query_cellar_R.ipynb"><span class="underline">https://github.com/OP-TED/ted-rdf-conversion-pipeline/blob/main/notebooks/query_cellar_R.ipynb</span></a></p>
+</li>
+</ol>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="3">
+<li>
+<p>Download SPARQL package archive and put in same folder as Notebook file:
+<a href="https://cran.r-project.org/src/contrib/Archive/SPARQL/SPARQL_1.16.tar.gz"><span class="underline">download SPARQL</span></a></p>
+</li>
+</ol>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="4">
+<li>
+<p>Install IRKernel:</p>
+</li>
+</ol>
+</div>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Run R in OS command line and type:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">install.packages("IRkernel")
+install.packages('RCurl')
+install.packages('XML')</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a" start="2">
+<li>
+<p>In appeared window, select the first mirror and press OK:
+<span class="image"><img src="_images/r/image45.png" alt="image" width="240" height="309"></span></p>
+</li>
+</ol>
+</div>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a" start="3">
+<li>
+<p>After installation is completed, type:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">IRkernel::installspec()</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="5">
+<li>
+<p>Open Jupyter Notebook file in your favourite code editor (e.g VS Code);</p>
+</li>
+<li>
+<p>Select R interpreter;</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/r/image23.png" alt="image" width="601" height="142"></span></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="7">
+<li>
+<p>Run All the Notebook Cells (example in VS Code):</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/r/image90.png" alt="image" width="502" height="100"></span></p>
+</div>
+<div class="paragraph">
+<p>After the execution on last output cell we can see results:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/r/image80.png" alt="image" width="487" height="411"></span></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_references"><a class="anchor" href="#_references"></a>References</h2>
+<div class="sectionbody">
+<div id="references-r" class="olist arabic">
+<ol class="arabic">
+<li>
+<p>“Running R Jupyter Notebooks in VS Code.” n.d. Practical Data Science.
+<a href="https://www.practicaldatascience.org/html/jupyter_r_notebooks.html"><span class="underline">https://www.practicaldatascience.org/html/jupyter_r_notebooks.html</span></a></p>
+</li>
+<li>
+<p>“SPARQL with R.” 2013. R-bloggers.
+<a href="https://www.r-bloggers.com/2013/01/sparql-with-r-in-less-than-5-minutes/" class="bare">https://www.r-bloggers.com/2013/01/sparql-with-r-in-less-than-5-minutes/</a><span class="[.underline"><a href="https://www.r-bloggers.com/2013/01/sparql-with-r-in-less-than-5-minutes/" class="bare">https://www.r-bloggers.com/2013/01/sparql-with-r-in-less-than-5-minutes/</a></span>]</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+    <p style="text-align:center">This document is created by the European Commission and is licensed under the terms of
+        EUPL-1.2 license</a>.
+        <br/>This page was built using the Antora default UI. The source code for this UI is licensed under the terms of
+        the MPL-2.0 license.
+    </p>
+
+        <script src="../../_/js/vendor/lunr.js"></script>
+<script src="../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../.." data-snippet-length="150" data-stylesheet="../../_/css/search.css"></script>
+<script async src="../../search-index.js"></script>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+<script src="../../_/js/vendor/lunr.js"></script>
+<script src="../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../.." data-snippet-length="150" data-stylesheet="../../_/css/search.css"></script>
+<script async src="../../search-index.js"></script>
+  </body>
+</html>
